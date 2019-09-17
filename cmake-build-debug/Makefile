@@ -123,32 +123,32 @@ Project2/fast:
 	$(MAKE) -f CMakeFiles/Project2.dir/build.make CMakeFiles/Project2.dir/build
 .PHONY : Project2/fast
 
-main.o: main.cpp.o
+mergesort.o: mergesort.cpp.o
 
-.PHONY : main.o
+.PHONY : mergesort.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Project2.dir/build.make CMakeFiles/Project2.dir/main.cpp.o
-.PHONY : main.cpp.o
+mergesort.cpp.o:
+	$(MAKE) -f CMakeFiles/Project2.dir/build.make CMakeFiles/Project2.dir/mergesort.cpp.o
+.PHONY : mergesort.cpp.o
 
-main.i: main.cpp.i
+mergesort.i: mergesort.cpp.i
 
-.PHONY : main.i
+.PHONY : mergesort.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Project2.dir/build.make CMakeFiles/Project2.dir/main.cpp.i
-.PHONY : main.cpp.i
+mergesort.cpp.i:
+	$(MAKE) -f CMakeFiles/Project2.dir/build.make CMakeFiles/Project2.dir/mergesort.cpp.i
+.PHONY : mergesort.cpp.i
 
-main.s: main.cpp.s
+mergesort.s: mergesort.cpp.s
 
-.PHONY : main.s
+.PHONY : mergesort.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Project2.dir/build.make CMakeFiles/Project2.dir/main.cpp.s
-.PHONY : main.cpp.s
+mergesort.cpp.s:
+	$(MAKE) -f CMakeFiles/Project2.dir/build.make CMakeFiles/Project2.dir/mergesort.cpp.s
+.PHONY : mergesort.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Project2"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... mergesort.o"
+	@echo "... mergesort.i"
+	@echo "... mergesort.s"
 .PHONY : help
 
 

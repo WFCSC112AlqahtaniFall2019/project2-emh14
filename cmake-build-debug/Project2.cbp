@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ethanharrison/Desktop/CSC 112/Projects/project-2-emh14/main.cpp">
+		<Unit filename="/Users/ethanharrison/Desktop/CSC 112/Projects/project-2-emh14/mergesort.cpp">
 			<Option target="Project2"/>
 		</Unit>
 		<Unit filename="/Users/ethanharrison/Desktop/CSC 112/Projects/project-2-emh14/CMakeLists.txt">

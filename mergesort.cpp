@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <assert.h>
 using namespace std;
 
 // function declarations
@@ -15,8 +16,11 @@ int main() {
 
     vector<int> v(length);  // vector to be sorted
     vector<int> t(length);  // temporary workspace
+
     // unit test for merge
-    /* your code here */
+
+
+
     // initialize and print input
     for(int i = 0; i < v.size(); i++) {
         v.at(i) = rand() % 100;
@@ -41,4 +45,24 @@ int main() {
     return 0;
 }
 
-/* your code here */
+//function 1 body
+void mergeSort(vector<int>& a, vector<int>& tmp, int left, int right){
+
+    if (left == right){
+        return;
+    }
+
+    int middle = (left + right) / 2; //find  middle of the vector
+
+    mergeSort(a, tmp, left, middle); //Sorts left hand side (including center value)
+    mergeSort(a, tmp, middle + 1, right); //Sorts right hand side
+
+    mergeSortedLists(a, tmp, left, middle, right); //Sorts previously sorted lists
+}
+
+//function 2 body
+void mergeSortedLists(vector<int>& a, vector<int>& tmp, int left, int middle, int right){
+
+}
+
+
