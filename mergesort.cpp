@@ -63,6 +63,49 @@ void mergeSort(vector<int>& a, vector<int>& tmp, int left, int right){
 //function 2 body
 void mergeSortedLists(vector<int>& a, vector<int>& tmp, int left, int middle, int right){
 
+    int tempIndex = left; //Used populate temporary vector
+
+    //Assigning temp variables for left side
+    int l = left;
+    int lEnd = middle;
+
+    //Assigning temp variables for right side
+    int r = middle + 1;
+    int rEnd = right;
+
+    //Iterate
+    while (l <= lEnd && r <= rEnd){
+        if(a.at(l) <= a.at(r)){//if the left value iss less, put it in new vector
+            tmp.at(tempIndex) = a.at(l);
+            tempIndex++;
+            l++;
+        }
+        else{//if the right value iss less, put it in new vector
+            tmp.at(tempIndex) = a.at(r);
+            tempIndex++;
+            r++;
+        }
+    }
+
+    //Copy the vector until it reaches the end
+    //Since one of the following will have already hit the end, only one while loop will run
+    while (l <= lEnd){
+        tmp.at(tempIndex) = a.at(l);
+        tempIndex++;
+        l++;
+    }
+    while(r <= rEnd){
+        tmp.at(tempIndex) = a.at(r);
+        tempIndex++;
+        r++;
+    }
+
+    //Take data from temp vector and put it back into a
+    tempIndex = left; //Reset index
+    while (tempIndex <= right){
+        a.at(tempIndex) = tmp.at(tempIndex);
+        tempIndex++;
+    }
 }
 
 
