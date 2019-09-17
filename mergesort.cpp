@@ -18,8 +18,8 @@ int main() {
     vector<int> t(length);  // temporary workspace
 
     // unit test for merge
-    vector<int> unit_v = {5, 4, 1, 2, 3};
-    vector<int> unit_t = {0, 0, 0, 0, 0};
+    vector<int> unit_v = {5, 4, 1, 2, 3}; //unit test main vector
+    vector<int> unit_t = {0, 0, 0, 0, 0}; //unit test temporary vector
     mergeSort(unit_v, unit_t, 0, unit_v.size()-1);
     for(int i = 1; i < unit_v.size(); i++) {
         assert(unit_v.at(i-1) <= unit_v.at(i));
