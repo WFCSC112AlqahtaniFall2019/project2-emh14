@@ -106,12 +106,12 @@ void mergeSortedLists(vector<int>& a, vector<int>& tmp, int left, int middle, in
 
     //Iterate
     while (l <= lEnd && r <= rEnd){
-        if(a.at(l) <= a.at(r)){//if the left value iss less, put it in new vector
+        if(a.at(l) <= a.at(r)){//if the left value is less, put it in new vector
             tmp.at(tempIndex) = a.at(l);
             tempIndex++;
             l++;
         }
-        else{//if the right value iss less, put it in new vector
+        else{//if the right value is less, put it in new vector
             tmp.at(tempIndex) = a.at(r);
             tempIndex++;
             r++;
