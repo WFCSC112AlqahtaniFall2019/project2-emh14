@@ -11,21 +11,41 @@ int main() {
 
     // get input: first is random seed, second is vector length
     int seed, length;
-    cin >> seed >> length;
+    cout << "Enter integer for seed: " << endl;
+    cin >> seed;
+    cout << "Enter integer for vector length: " << endl;
+    cin >> length;
     srand(seed);
 
     vector<int> v(length);  // vector to be sorted
     vector<int> t(length);  // temporary workspace
 
     // unit test for merge
+    cout << endl << "Beginning Unit Test." << endl;
     vector<int> unit_v = {5, 4, 1, 2, 3}; //unit test main vector
+
+    //print test vector
+    cout << "Unit Test Original Vector: " << endl;
+    for(int i = 0; i < unit_v.size(); i++) {
+        cout << unit_v.at(i) << '\t';
+    }
+
     vector<int> unit_t = {0, 0, 0, 0, 0}; //unit test temporary vector
     mergeSort(unit_v, unit_t, 0, unit_v.size()-1);
     for(int i = 1; i < unit_v.size(); i++) {
         assert(unit_v.at(i-1) <= unit_v.at(i));
     }
 
+    //print test vector after sort
+    cout << endl << "Expecting: " << endl << "1\t2\t3\t4\t5" << endl << "Got: " << endl;
+    for(int i = 0; i < unit_v.size(); i++) {
+        cout << unit_v.at(i) << '\t';
+    }
+
+    cout << endl << "End of Unit Test." << endl << endl;
+
     // initialize and print input
+    cout << "Original vector: " << endl;
     for(int i = 0; i < v.size(); i++) {
         v.at(i) = rand() % 100;
         cout << v.at(i) << '\t';
@@ -36,6 +56,7 @@ int main() {
     mergeSort(v, t, 0, v.size()-1);
 
     // print output
+    cout << "Sorted vector: " << endl;
     for(int i = 0; i < v.size(); i++) {
         cout << v.at(i) << '\t';
     }
@@ -111,5 +132,4 @@ void mergeSortedLists(vector<int>& a, vector<int>& tmp, int left, int middle, in
         tempIndex++;
     }
 }
-
 
