@@ -1,3 +1,9 @@
+/* Ethan Harrison
+ * CSC 112
+ * Project 2
+ * MergeSort
+ * */
+
 #include <iostream>
 #include <vector>
 #include <assert.h>
